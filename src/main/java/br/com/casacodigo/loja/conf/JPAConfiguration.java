@@ -25,7 +25,7 @@ public class JPAConfiguration {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setUsername("root");
 		dataSource.setPassword("geografia");
-		dataSource.setUrl("jdbc:mysql://localhost:3306/casadocodigo");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/casacodigo");
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 		
 		factoryBean.setDataSource(dataSource);
@@ -37,7 +37,7 @@ public class JPAConfiguration {
 		
 		factoryBean.setJpaProperties(props);
 		
-		factoryBean.setPackagesToScan("br.com.casadocodigo.loja.models");
+		factoryBean.setPackagesToScan("br.com.casacodigo.loja.models");
 		
 		return factoryBean;
 	}
