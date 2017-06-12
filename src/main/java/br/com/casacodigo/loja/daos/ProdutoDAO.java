@@ -22,12 +22,13 @@ public class ProdutoDAO {
 		manager.persist(produto);
 	}
 	
+	@SuppressWarnings("unchecked")
 	public List<Produto> listar(){
 		return manager.createQuery("select p from Produto p").getResultList();
 	}
 	
-	/*public Produto find(int id){
+	public Produto find(int id){
 		return manager.createQuery("select distinct(p) from Produto p join fetch p.precos precos where p.id = :id", Produto.class).setParameter("id", id).getSingleResult();
-	}*/
+	}
 	
 }

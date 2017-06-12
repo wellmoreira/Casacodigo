@@ -29,7 +29,16 @@ public class Produto {
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Calendar dataLancamento;
 	
+	private String sumarioPath;
 	
+	public String getSumarioPath() {
+		return sumarioPath;
+	}
+
+	public void setSumarioPath(String sumarioPath) {
+		this.sumarioPath = sumarioPath;
+	}
+
 	public int getId() {
 		return id;
 	}
