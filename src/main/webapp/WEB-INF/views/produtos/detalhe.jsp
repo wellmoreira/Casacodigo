@@ -2,6 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,7 +33,7 @@
 
   <header id="layout-header">
 		<div class="clearfix container">
-			<a href="/" id="logo">
+			<a href="${s:mvcUrl('HC#index').build()}" id="logo">
 				<img src="https://cdn.rawgit.com/alura-cursos/spring-mvc-i-criando-aplicacoes-web-master/master/src/main/webapp/resources/imagens/cdc-logo.svg" />
 			</a>
 			<div id="header-content">
@@ -51,7 +52,8 @@
 	</header>
 	<nav class="categories-nav">
 		<ul class="container">
-			<li class="category"><a href="http://www.casadocodigo.com.br">Home</a></li>
+		
+			<li class="category"><a href="${s:mvcUrl('HC#index').build()}" class="block clearfix">Home</a></li>
 			<li class="category"><a href="/collections/livros-de-agile">
 					Agile </a></li>
 			<li class="category"><a href="/collections/livros-de-front-end">
@@ -87,7 +89,7 @@
 	
 	  
 	  <section class="buy-options clearfix">  
-	  <form action="<c:url value='/carrinho/add' />" method="post" class="container">
+	  <form:form servletRelativeAction="/carrinho/add" method="post" cssClass="container">
 	    <ul id="variants" class="clearfix">
 	    	<input type="hidden" name="produtoId" value="${produto.id}" />
 	    	<c:forEach items="${produto.precos}" var="preco">
@@ -102,7 +104,7 @@
 	    	</c:forEach>           
 	    </ul>
 	    <button type="submit" class="submit-image icon-basket-alt" alt="Compre Agora" title="Compre Agora${produto.titulo}"></button>
-	  </form>
+	   </form:form>
 	  
 	</section>
 	  
