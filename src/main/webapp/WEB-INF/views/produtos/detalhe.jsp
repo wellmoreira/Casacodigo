@@ -32,7 +32,7 @@
 
   <header id="layout-header">
 		<div class="clearfix container">
-			<a href="/" id="logo">
+			<a href="${s:mvcUrl('HC#index').build()}" id="logo">
 				<img src="https://cdn.rawgit.com/alura-cursos/spring-mvc-i-criando-aplicacoes-web-master/master/src/main/webapp/resources/imagens/cdc-logo.svg" />
 			</a>
 			<div id="header-content">
@@ -51,7 +51,8 @@
 	</header>
 	<nav class="categories-nav">
 		<ul class="container">
-			<li class="category"><a href="http://www.casadocodigo.com.br">Home</a></li>
+		
+			<li class="category"><a href="${s:mvcUrl('HC#index').build()}" class="block clearfix">Home</a></li>
 			<li class="category"><a href="/collections/livros-de-agile">
 					Agile </a></li>
 			<li class="category"><a href="/collections/livros-de-front-end">

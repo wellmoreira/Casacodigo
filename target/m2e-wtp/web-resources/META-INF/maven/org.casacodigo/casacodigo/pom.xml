@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.casacodigo</groupId>
-  <artifactId>casacodigo</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
-  <packaging>war</packaging>
-  <build>
-    <finalName>casacodigo</finalName>
-    <plugins>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.casacodigo</groupId>
+	<artifactId>casacodigo</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<build>
+		<finalName>casacodigo</finalName>
+		<plugins>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.6</version>
@@ -16,16 +17,16 @@
 				</configuration>
 			</plugin>
 		</plugins>
-  </build>
-  
-  <properties>
-    <failOnMissingWebXml>false</failOnMissingWebXml>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-  
-  <dependencies>
+	</build>
+
+	<properties>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
@@ -134,7 +135,19 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>2.5.1</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>18.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>4.1.0.RELEASE</version>
+		</dependency>
 	</dependencies>
-  
-  
+
+
 </project>
