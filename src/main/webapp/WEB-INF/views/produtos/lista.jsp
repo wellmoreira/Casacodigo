@@ -45,7 +45,8 @@
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><security:authentication property="principal.username" /></a></li>
+					<li><a href="#"><security:authentication
+								property="principal.username" /></a></li>
 				</ul>
 
 			</div>
@@ -63,6 +64,7 @@
 			<tr>
 				<th>Título</th>
 				<th>Descrição</th>
+				<th>Preço</th>
 				<th>Páginas</ths>
 			</tr>
 
@@ -72,6 +74,7 @@
 						href="${s:mvcUrl('PC#detalhe').arg(0, produto.id).build()}">${produto.titulo}</a>
 					</td>
 					<td>${produto.descricao}</td>
+					<td>${produto.precos}</td>
 					<td>${produto.paginas}</td>
 				</tr>
 			</c:forEach>

@@ -28,14 +28,15 @@ public class PagamentoController {
 	@Autowired
 	RestTemplate restTemplate;
 	
+	
 	@RequestMapping(value="/finalizar", method=RequestMethod.POST)
 	public Callable<ModelAndView> finalizar(RedirectAttributes model){
 		return () -> {
+			String uri = "http://book-payment.herokuapp.com/payment";
 			try {
-				String uri = "http://book-payment.herokuapp.com/payment";
 				String response = restTemplate.postForObject(uri, new DadosPagamento(carrinho.getTotal()), String.class);
-				model.addFlashAttribute("message", response);
 				System.out.println(response);
+				model.addFlashAttribute("message", response);
 				return new ModelAndView("redirect:/produtos");
 			} catch (HttpClientErrorException e) {
 				e.printStackTrace();
@@ -44,4 +45,6 @@ public class PagamentoController {
 			}
 		};
 	}
+
+	
 }
