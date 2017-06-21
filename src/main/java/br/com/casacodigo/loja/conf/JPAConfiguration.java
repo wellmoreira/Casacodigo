@@ -1,5 +1,6 @@
 package br.com.casacodigo.loja.conf;
 
+import java.net.URISyntaxException;
 import java.util.Properties;
 
 import javax.persistence.EntityManagerFactory;
@@ -44,7 +45,7 @@ public class JPAConfiguration {
 
 	@Bean
 	@Profile("dev")
-	public DataSource dataSouce() {
+	public DataSource dataSouce() throws URISyntaxException {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setUsername("root");
 		dataSource.setPassword("geografia");
